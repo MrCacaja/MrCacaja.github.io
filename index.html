@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Portfólio Carlos Prezzi - Bootstrap</title>
+
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/eva-icons"></script>
+</head>
+
+<body>
+<img class="background-icon" src="assets/images/logo.svg" />
+
+<div id="toolbar">
+    <button onclick="toggleWindow('profile', true)" type="button" class="btn">
+        <i data-eva="home-outline"></i>
+    </button>
+    <button onclick="toggleWindow('skills', true)" type="button" class="btn">
+        <i data-eva="settings-2-outline"></i>
+    </button>
+    <button onclick="toggleWindow('projects', true)" type="button" class="btn">
+        <i data-eva="award-outline"></i>
+    </button>
+    <button onclick="toggleWindow('contacts', true)" type="button" class="btn">
+        <i data-eva="people-outline"></i>
+    </button>
+</div>
+
+<div class="desktop">
+    <div class="window-col">
+        <div id="profile" class="window-container">
+
+            <div class="window-header">
+                <label>Quem sou eu</label>
+                <i onclick="toggleWindow('profile', false)" class="close-icon" data-eva="close-outline"></i>
+            </div>
+
+            <div class="window-content">
+                <h1>Carlos Eduardo Prezzi</h1>
+                <img src="assets/images/eu.jpg">
+                <p>Tive meu primeiro contato com computadores aos quatro anos de
+                    idade e desde então isso se tornou a ferramenta que eu utilizo para
+                    lazer, estudo e agora trabalho.
+                </p>
+                <p>Adoro entender cada vez um pouco mais sobre o que os
+                    computadores são capazes e fazem por debaixo dos panos.</p>
+                <p>Utilizo essa paixão para elaborar projetos que me fazem
+                    conhecer ainda mais coisas, sempre potencializando todos projetos
+                    futuros.</p>
+
+                <i class="back-icon" data-eva="person"></i>
+            </div>
+
+        </div>
+
+        <div id="skills" class="window-container">
+
+            <div class="window-header">
+                <label>Habilidades</label>
+                <i onclick="toggleWindow('skills', false)" class="close-icon" data-eva="close-outline"></i>
+            </div>
+
+            <div class="window-content">
+                <div class="img-row">
+                    <img src="assets/images/ionic.svg">
+                    <img src="assets/images/angular.svg">
+                    <img src="assets/images/node.svg">
+                    <img src="assets/images/java.svg">
+                    <img src="assets/images/c++.svg">
+                    <img src="assets/images/rust.svg">
+                    <img src="assets/images/python.svg">
+                </div>
+
+                <i class="back-icon" data-eva="book-open"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="window-col">
+        <div id="projects" class="window-container">
+
+            <div class="window-header">
+                <label>Projetos</label>
+                <i onclick="toggleWindow('projects', false)" class="close-icon" data-eva="close-outline"></i>
+            </div>
+
+            <div class="window-content">
+                <div class="img-row">
+                    <a href="https://github.com/MrCacaja">
+                        <img src="assets/images/github.svg">
+                    </a>
+                    <a href="https://gitlab.com/cacaja">
+                        <img src="assets/images/gitlab.svg">
+                    </a>
+                </div>
+
+                <i style="transform: translate(20%, 20%)" class="back-icon" data-eva="search-outline"></i>
+            </div>
+
+        </div>
+
+        <div id="contacts" class="window-container">
+
+            <div class="window-header">
+                <label>Contato e redes</label>
+                <i onclick="toggleWindow('contacts', false)" class="close-icon" data-eva="close-outline"></i>
+            </div>
+
+            <div class="window-content">
+                <div class="img-row">
+                    <a href="https://wa.me/47996068356">
+                        <img src="assets/images/whatsapp.svg">
+                    </a>
+                    <a href="https://www.linkedin.com/in/carlos-eduardo-prezzi-a41018203/">
+                        <img src="assets/images/linkedin.svg">
+                    </a>
+                </div>
+
+                <i style="transform: translate(-150%, 25%)" class="back-icon" data-eva="message-circle-outline"></i>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>

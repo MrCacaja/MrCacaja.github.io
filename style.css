@@ -1,0 +1,178 @@
+:root {
+    --light: #FFFFFFFF;
+    --dark: #040117;
+    --dark-translucid: #0401173F;
+    --dark-transparent: #040117B2;
+    --primary: #3095A3;
+    --primary-dark: #10676B;
+    --secondary: #10624E;
+    --secondary-dark: #043A2A;
+}
+
+@font-face {
+    font-family: Karma;
+    src: local('fonts/karma.ttf');
+}
+
+* {
+    font-family: Karma, serif;
+    color: var(--light);
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: var(--primary-dark);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 8px;
+}
+
+body {
+    background: var(--secondary-dark);
+    margin: 0;
+    height: 95vh;
+    overflow: hidden;
+}
+
+.desktop {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+#toolbar {
+    transform: translate(0, -50%);
+    top: 50%;
+    position: absolute;
+    z-index: 100;
+    opacity: 90%;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+    border-radius: 0 8px 8px 0;
+    backdrop-filter: blur(2px);
+}
+
+#toolbar .btn {
+    background: var(--primary-dark);
+    margin: 0 6px;
+    padding: 12px;
+}
+
+#toolbar svg {
+    filter: invert(8%) sepia(5%) saturate(6298%) hue-rotate(202deg) brightness(90%) contrast(115%);
+    height: 100%;
+    width: 100%;
+}
+
+.background-icon {
+    position: absolute;
+    margin: auto;
+    z-index: 0;
+    filter: invert(31%) sepia(18%) saturate(1556%) hue-rotate(115deg) brightness(97%) contrast(99%) drop-shadow(3px 3px 2px var(--dark-translucid));
+    height: 100%;
+    width: 100%;
+}
+
+.window-col {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-around;
+}
+
+.window-container {
+    height: 100%;
+    min-width: 248px;
+    min-height: 248px;
+    background: var(--dark-transparent);
+    box-shadow: 0 4px 4px var(--dark-translucid);
+    backdrop-filter: blur(2px);
+    border-radius: 24px;
+    border-color: var(--primary);
+    overflow: hidden;
+}
+
+.window-container .back-icon {
+    filter: invert(50%) sepia(12%) saturate(2127%) hue-rotate(139deg) brightness(99%) contrast(87%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(48%, 25%);
+    width: 40%;
+    height: 40%;
+}
+
+.window-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary);
+    box-shadow: 0 4px 4px var(--dark-translucid);
+}
+
+.window-header .close-icon {
+    margin-left: auto;
+    margin-right: 16px;
+    cursor: pointer;
+    filter: invert(27%) sepia(73%) saturate(886%) hue-rotate(142deg) brightness(93%) contrast(87%);
+}
+
+.window-header label {
+    margin-left: auto;
+    color: var(--dark);
+}
+
+.window-content {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#profile img {
+    width: 124px;
+    height: 124px;
+    border-radius: 100%;
+    margin: 24px;
+}
+
+#profile p {
+    margin: 0;
+}
+
+.img-row {
+    width: 100%;
+    height: 100%;
+    /*overflow-y: hidden;*/
+    /*overflow-x: scroll;*/
+    /*white-space: nowrap;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.img-row img {
+    filter: invert(26%) sepia(13%) saturate(4529%) hue-rotate(126deg) brightness(96%) contrast(87%) drop-shadow(3px 3px 2px var(--dark-translucid));
+    width: 128px;
+    height: 128px;
+}
